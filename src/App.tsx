@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 
 import "./App.css";
+import Home from "./components/Home";
 
 function App() {
   return (
@@ -24,7 +25,7 @@ function App() {
         {/* Contenedor para definir las diferentes rutas de la aplicación.*/}
         <Routes>
           {/* Componente que define qué componente se renderiza para cada ruta.*/}
-          <Route path="/" element={<h1>I'm main page</h1>} />
+          <Route path="/" element={<Home />} />
           <Route path="/about" element={<h1>I'm main about</h1>} />
           <Route path="/products" element={<h1>I'm main products</h1>} />
         </Routes>
