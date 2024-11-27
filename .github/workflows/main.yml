@@ -27,7 +27,7 @@ jobs:
           echo "Esto es el valor de account: ${{env.account}}"
 
           echo "Esto es el valor de username: ${{secrets.NOMBRE}}"
-          echo "Esto es el valor de password: ${{secrets.MI_PASSWORD}}"
+          echo "Esto es el valor de password: ${{secrets.PASSWORD}}"
       - name: "Mostrando variables por defecto"
         run: |
           echo "Evento: ${{toJSON(github.event)}}"
