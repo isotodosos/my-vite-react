@@ -17,7 +17,7 @@ export default function Home() {
   return (
     <div>
       <h1>Zascarrillo Chuck Norris</h1>
-      <p>{answerChuck ?? "Cargando..."}</p>{" "}
+      <p role="listitem">{answerChuck ?? "Cargando..."}</p>{" "}
       {/* Muestra 'Cargando...' mientras se obtiene la broma */}
     </div>
   );
