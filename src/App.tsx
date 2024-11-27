@@ -26,8 +26,8 @@ function App() {
         <Routes>
           {/* Componente que define qué componente se renderiza para cada ruta.*/}
           <Route path="/" element={<Home />} />
-          <Route path="/about" element={<h1>I'm main about</h1>} />
-          <Route path="/products" element={<h1>I'm main products</h1>} />
+          <Route path="/about" element={<h1>About</h1>} />
+          <Route path="/products" element={<h1>Products</h1>} />
         </Routes>
       </Router>
     </div>
