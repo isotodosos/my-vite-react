@@ -6,7 +6,7 @@ on:
     branches: ["master"]
 
 jobs:
-  buils:
+  build:
     env:
       platform: Github-Actions
       region: Spain-Madrid
