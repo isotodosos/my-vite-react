@@ -1,1 +1,35 @@
+name: CI
+on:
+  push:
+    branches: ["master"]
+  pull_request:
+    branches: ["master"]
 
+jobs:
+  buils:
+    env:
+      platform: Github-Actions
+      region: Spain-Madrid
+      account: 123456
+
+      username: ${{secrets.NOMBRE}}
+      password: ${{secrets.PASSWORD}}
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: "Mostrar mensaje"
+        run: echo "Hola mundo"
+      - name: "Mostrando variables de entorno"
+        if: ${{env.platform == 'Github-Actions'}}
+        run: |
+          echo "Esto es el valor de platform: ${{env.platform}}"
+          echo "Esto es el valor de region: ${{env.region}}"
+          echo "Esto es el valor de account: ${{env.account}}"
+
+          echo "Esto es el valor de username: ${{secrets.NOMBRE}}"
+          echo "Esto es el valor de password: ${{secrets.MI_PASSWORD}}"
+      - name: "Mostrando variables por defecto"
+        run: |
+          echo "Evento: ${{toJSON(github.event)}}"
+          echo "Github_ACTOR: $GITHUB_ACTOR"
+          echo "GITHUB_REPOSITORY: $GITHUB_REPOSITORY"
